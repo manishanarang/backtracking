@@ -16,7 +16,7 @@ class Solution {
             if(subset.contains(nums[i])) continue;
             subset.add(nums[i]);
             dfs(subset, nums);
-            subset.remove(subset.size()-1);
+            subset.removeLast();
         }
     }
 }
