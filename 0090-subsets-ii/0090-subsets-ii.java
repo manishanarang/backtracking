@@ -18,7 +18,7 @@ class Solution {
             dfs(i+1, subset, nums);
             subset.remove(subset.size()-1);
         
-        while((i+1 )< nums.length && nums[i] == nums[i+1]) i++;
+            while((i+1 )< nums.length && nums[i] == nums[i+1]) i++;
             dfs(i+1, subset, nums);
         
     }
