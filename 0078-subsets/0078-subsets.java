@@ -8,13 +8,18 @@ class Solution {
         return result;
     }
 
-    public void dfs(int index, List<Integer> subset, int[]nums){
-        result.add(new ArrayList<>(subset));
+    public void dfs(int i, List<Integer> subset, int[]nums){
+        if(i >= nums.length){
+            result.add(new ArrayList<>(subset));
+            return;
+        }
         
-        for(int i=index; i<nums.length;i++){
+        
             subset.add(nums[i]);
             dfs(i+1, subset, nums);
             subset.remove(subset.size()-1);
-        }
+        
+        dfs(i+1, subset, nums);
+        
     }
 }
